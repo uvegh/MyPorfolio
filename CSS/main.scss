@@ -4,6 +4,7 @@
 @import "./_mixins.scss";
 @import "./_projectsBtn";
 @import "./_viewProjectBtn";
+@import "./_arrowDown";
 
 header{
     color: #141c3a;
@@ -23,7 +24,7 @@ header{
         top: 30%;
         
         }}
-.col:hover .outer{
+.project:hover .outer{
     transition: all ease 3s;
     display: block;
     
@@ -46,7 +47,7 @@ ul{
 .nav-link{
     &:hover{
         transform: translateY(-6px);
-        transition: all 80ms;
+        transition: all 100ms;
     }
 }
 
