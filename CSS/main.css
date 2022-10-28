@@ -1,0 +1,240 @@
+* {
+  scroll-behavior: smooth;
+}
+
+@-webkit-keyframes color {
+  0% {
+    background: #33CCCC;
+  }
+  20% {
+    background: #33CC36;
+  }
+  40% {
+    background: #B8CC33;
+  }
+  60% {
+    background: #FCCA00;
+  }
+  80% {
+    background: #33CC36;
+  }
+  100% {
+    background: #33CCCC;
+  }
+}
+
+@keyframes color {
+  0% {
+    background: #33CCCC;
+  }
+  20% {
+    background: #33CC36;
+  }
+  40% {
+    background: #B8CC33;
+  }
+  60% {
+    background: #FCCA00;
+  }
+  80% {
+    background: #33CC36;
+  }
+  100% {
+    background: #33CCCC;
+  }
+}
+.banner {
+  background: #33CCCC; /* Fallback */
+  -webkit-animation: color 9s infinite linear;
+          animation: color 9s infinite linear;
+  text-align: center;
+  padding: 2em;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Kavoon", sans-serif;
+  font-size: 2.5em;
+  color: white;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.outer {
+  /* The End */
+}
+.outer .projectLink {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.outer p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.outer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.outer a::after {
+  content: "";
+  background: white;
+  mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.outer a:hover::after {
+  height: calc(100% + 8px);
+}
+.outer .note {
+  top: auto;
+  bottom: 0;
+  color: #ddd;
+  font-size: 13px;
+  text-transform: none;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+header {
+  color: #141c3a;
+}
+
+.navbar {
+  -webkit-animation: slideOnLoad 2.5 ease;
+          animation: slideOnLoad 2.5 ease;
+}
+@-webkit-keyframes slideOnLoad {
+  0% {
+    transform: translateX(-100%);
+    opacity: -1;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOnLoad {
+  0% {
+    transform: translateX(-100%);
+    opacity: -1;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.about {
+  background: rgb(33, 53, 161);
+  background: linear-gradient(90deg, rgba(33, 53, 161, 0.812762605) 0%, rgb(0, 255, 136) 100%);
+}
+.about p {
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.outer {
+  display: none;
+  z-index: 1;
+}
+.outer .title {
+  top: 30%;
+}
+
+.col:hover .outer {
+  transition: all ease 3s;
+  display: block;
+}
+
+footer {
+  background: rgb(14, 27, 100);
+  background: linear-gradient(90deg, rgba(11, 18, 59, 0.813) 0%, rgb(6, 143, 79) 100%);
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+footer ul a:hover {
+  color: rgb(192, 189, 189);
+  transition: all 200ms;
+}
+
+.nav-link:hover {
+  transform: translateY(-6px);
+  transition: all 80ms;
+}/*# sourceMappingURL=main.css.map */

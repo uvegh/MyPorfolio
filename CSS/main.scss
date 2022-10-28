@@ -1,0 +1,55 @@
+*{scroll-behavior: smooth;}
+
+// @import "projectsBtn";
+@import "./_mixins.scss";
+@import "./_projectsBtn";
+@import "./_viewProjectBtn";
+
+header{
+    color: #141c3a;
+}
+.navbar{
+    @include animationOnLoadSlide;
+    animation:slideOnLoad 2.5 ease   ;
+}
+
+.about{
+    p{font-weight: 600; box-sizing: border-box; }
+    background: rgb(33,53,161);
+    background: linear-gradient(90deg, rgba(33,53,161,0.8127626050420168) 0%, rgba(0,255,136,1) 100%);
+}
+.outer{display: none; z-index: 1; 
+        .title{
+        top: 30%;
+        
+        }}
+.col:hover .outer{
+    transition: all ease 3s;
+    display: block;
+    
+    
+}
+
+footer{background: rgb(14, 27, 100);
+    background: linear-gradient(90deg, rgba(11, 18, 59, 0.813) 0%, rgb(6, 143, 79) 100%);
+ul{
+    a{text-decoration: none;
+    color: white;
+    font-weight: 600;
+    &:hover{
+        color: rgb(192, 189, 189);
+        transition: all 200ms;
+    }
+    }
+}
+}
+.nav-link{
+    &:hover{
+        transform: translateY(-6px);
+        transition: all 80ms;
+    }
+}
+
+// @media screen and (max-width: 768px) {
+//   .languages{height: 50vh;}
+//   }
